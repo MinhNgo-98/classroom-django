@@ -31,7 +31,7 @@ export class AddMember extends Component {
 		event.preventDefault();
 		axios
 			.post(
-				'http://127.0.0.1:8000/api/student/',
+				'https://classroom-django.herokuapp.com/api/student/',
 				{
 					first_name: this.state.first_name,
 					last_name: this.state.last_name,

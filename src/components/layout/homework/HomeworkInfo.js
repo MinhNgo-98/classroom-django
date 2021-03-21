@@ -15,7 +15,7 @@ export class HomeworkInfo extends Component {
 	handleChange() {
 		axios
 			.put(
-				`http://127.0.0.1:8000/api/homework/${this.state.homework.id}/`,
+				`https://classroom-django.herokuapp.com/api/homework/${this.state.homework.id}/`,
 				{
 					title: this.state.homework.title,
 					description: this.state.homework.description,

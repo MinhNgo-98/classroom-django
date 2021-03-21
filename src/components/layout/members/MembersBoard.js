@@ -140,7 +140,10 @@ export class MembersBoard extends Component {
 						</div>
 					</div>
 				) : (
-					<div className="d-flex justify-content-center" />
+					<div>
+						{' '}
+						<p className="text-secondary">Please login to use the app</p>{' '}
+					</div>
 				)}
 			</div>
 		);

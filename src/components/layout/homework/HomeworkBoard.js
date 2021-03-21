@@ -147,7 +147,10 @@ export class HomeworkBoard extends Component {
 						})}
 					</ul>
 				) : (
-					<div className="d-flex justify-content-center" />
+					<div>
+						{' '}
+						<p className="text-secondary">Please login to use the app</p>{' '}
+					</div>
 				)}
 			</div>
 		);

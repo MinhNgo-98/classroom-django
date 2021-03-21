@@ -140,10 +140,7 @@ export class MembersBoard extends Component {
 						</div>
 					</div>
 				) : (
-					<div>
-						{' '}
-						<p className="text-secondary">Please login to use the app</p>{' '}
-					</div>
+					<div />
 				)}
 			</div>
 		);

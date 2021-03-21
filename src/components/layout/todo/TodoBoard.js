@@ -141,10 +141,7 @@ export class TodoBoard extends Component {
 						})}
 					</ul>
 				) : (
-					<div>
-						{' '}
-						<p className="text-secondary">Please login to use the app</p>{' '}
-					</div>
+					<div />
 				)}
 			</div>
 		);

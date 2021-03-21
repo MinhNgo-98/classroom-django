@@ -81,12 +81,12 @@ export class Login extends Component {
 						</div>
 						<div className="col-lg-3 col-md-2" />
 					</div>
-					<div className="d-flex justify-content-center align-items-center">
-						<div>
-							<p className="text-secondary">Credentials for testing</p>
-							<p className="text-secondary">USERNAME: test</p>
-							<p className="text-secondary">PASSWORD: 123456</p>
-						</div>
+				</div>
+				<div className="d-flex justify-content-center align-items-center">
+					<div>
+						<p className="text-secondary">Credentials for testing</p>
+						<p className="text-secondary">USERNAME: test</p>
+						<p className="text-secondary">PASSWORD: 123456</p>
 					</div>
 				</div>
 			</div>

@@ -22,7 +22,7 @@ export class Register extends Component {
 		event.preventDefault();
 		if (this.state.credentials['password'] === this.state.credentials['password2']) {
 			axios
-				.post('api/auth/register/', {
+				.post('https://classroom-django.herokuapp.com/api/auth/register/', {
 					username: this.state.credentials['username'],
 					email: this.state.credentials['email'],
 					password: this.state.credentials['password']

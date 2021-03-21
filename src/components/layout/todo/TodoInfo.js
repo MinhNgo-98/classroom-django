@@ -14,7 +14,7 @@ export class TodoInfo extends Component {
 	handleChange() {
 		axios
 			.put(
-				`api/todo/${this.state.todo.id}/`,
+				`https://classroom-django.herokuapp.com/api/todo/${this.state.todo.id}/`,
 				{
 					title: this.state.todo.title,
 					description: this.state.todo.description,

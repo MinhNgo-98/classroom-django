@@ -25,7 +25,7 @@ export class TodoBoard extends Component {
 	fetchData() {
 		console.log(this.props.token);
 		axios
-			.get('api/todo', {
+			.get('https://classroom-django.herokuapp.com/api/todo', {
 				headers: {
 					Authorization: `token ${this.props.token}`
 				}
@@ -43,7 +43,7 @@ export class TodoBoard extends Component {
 	editTodo(todo) {
 		axios
 			.put(
-				`api/todo/${todo.id}/`,
+				`https://classroom-django.herokuapp.com/api/todo/${todo.id}/`,
 				{
 					description: todo.description,
 					is_editing: !todo.is_editing
@@ -65,7 +65,7 @@ export class TodoBoard extends Component {
 
 		axios
 			.put(
-				`api/todo/${todo.id}/`,
+				`https://classroom-django.herokuapp.com/api/todo/${todo.id}/`,
 				{
 					description: description,
 					is_editing: !todo.is_editing
@@ -84,7 +84,7 @@ export class TodoBoard extends Component {
 	}
 	deleteTodo(id) {
 		axios
-			.delete(`api/todo/${id}`, {
+			.delete(`https://classroom-django.herokuapp.com/api/todo/${id}`, {
 				headers: {
 					Authorization: `token ${this.props.token}`
 				}

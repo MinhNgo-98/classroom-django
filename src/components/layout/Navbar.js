@@ -18,7 +18,7 @@ export class Navbar extends Component {
 	logoutUser = () => {
 		let config = {
 			method: 'post',
-			url: 'https://classroom-django.herokuapp.com/api/auth/logout/',
+			url: 'api/auth/logout/',
 			headers: {
 				Authorization: `Token ${this.state.token}`
 			},

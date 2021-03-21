@@ -27,7 +27,7 @@ export class AddHomework extends Component {
 		event.preventDefault();
 		axios
 			.post(
-				'https://classroom-django.herokuapp.com/api/homework/',
+				'api/homework/',
 				{
 					title: this.state.title,
 					description: this.state.description,

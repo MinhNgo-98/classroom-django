@@ -23,7 +23,7 @@ export class AddTodo extends Component {
 		event.preventDefault();
 		axios
 			.post(
-				'https://classroom-django.herokuapp.com/api/todo/',
+				'api/todo/',
 				{
 					description: this.state.description
 				},

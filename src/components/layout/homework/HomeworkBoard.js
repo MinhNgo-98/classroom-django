@@ -25,7 +25,7 @@ export class HomeworkBoard extends Component {
 	fetchData() {
 		console.log(this.props.token);
 		axios
-			.get('https://classroom-django.herokuapp.com/api/homework', {
+			.get('api/homework', {
 				headers: {
 					Authorization: `token ${this.props.token}`
 				}
@@ -43,7 +43,7 @@ export class HomeworkBoard extends Component {
 	editHomework(homework) {
 		axios
 			.put(
-				`https://classroom-django.herokuapp.com/api/homework/${homework.id}/`,
+				`api/homework/${homework.id}/`,
 				{
 					title: homework.title,
 					description: homework.description,
@@ -69,7 +69,7 @@ export class HomeworkBoard extends Component {
 
 		axios
 			.put(
-				`https://classroom-django.herokuapp.com/api/homework/${homework.id}/`,
+				`api/homework/${homework.id}/`,
 				{
 					title: title,
 					description: description,
@@ -90,7 +90,7 @@ export class HomeworkBoard extends Component {
 	}
 	deleteHomework(id) {
 		axios
-			.delete(`https://classroom-django.herokuapp.com/api/homework/${id}`, {
+			.delete(`api/homework/${id}`, {
 				headers: {
 					Authorization: `token ${this.props.token}`
 				}

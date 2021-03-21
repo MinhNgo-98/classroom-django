@@ -29,7 +29,7 @@ export class Members extends Component {
 	}
 	fetchData() {
 		axios
-			.get('https://classroom-django.herokuapp.com/api/student/', {
+			.get('api/student/', {
 				headers: {
 					Authorization: `token ${this.props.token}`
 				}
@@ -52,7 +52,7 @@ export class Members extends Component {
 	editNote(student) {
 		let config = {
 			method: 'put',
-			url: `https://classroom-django.herokuapp.com/api/student/${student.id}/`,
+			url: `api/student/${student.id}/`,
 			headers: {
 				Authorization: `Token ${this.props.token}`
 			},
@@ -76,7 +76,7 @@ export class Members extends Component {
 		let note = document.querySelector(`#student-note${student.id}`).value;
 		let config = {
 			method: 'put',
-			url: `https://classroom-django.herokuapp.com/api/student/${student.id}/`,
+			url: `api/student/${student.id}/`,
 			headers: {
 				Authorization: `Token ${this.props.token}`
 			},
@@ -98,7 +98,7 @@ export class Members extends Component {
 	}
 	deleteStudent(id) {
 		axios
-			.delete(`https://classroom-django.herokuapp.com/api/student/${id}/`, {
+			.delete(`api/student/${id}/`, {
 				headers: {
 					Authorization: `Token ${this.props.token}`
 				}

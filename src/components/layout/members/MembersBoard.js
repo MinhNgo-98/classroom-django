@@ -27,7 +27,7 @@ export class MembersBoard extends Component {
 	fetchData() {
 		console.log(this.props.token);
 		axios
-			.get('https://classroom-django.herokuapp.com/api/student', {
+			.get('api/student', {
 				headers: {
 					Authorization: `token ${this.props.token}`
 				}
@@ -49,7 +49,7 @@ export class MembersBoard extends Component {
 	}
 	editStudent(student) {
 		axios
-			.put(`https://classroom-django.herokuapp.com/api/student/${student.id}/`, {
+			.put(`api/student/${student.id}/`, {
 				title: student.title,
 				description: student.description,
 				due_date: student.due_date,
@@ -67,7 +67,7 @@ export class MembersBoard extends Component {
 		let due_date = document.querySelector(`#edit-due-date-${student.id}`).value;
 
 		axios
-			.put(`https://classroom-django.herokuapp.com/api/student/${student.id}/`, {
+			.put(`api/student/${student.id}/`, {
 				title: title,
 				description: description,
 				due_date: due_date,
@@ -81,7 +81,7 @@ export class MembersBoard extends Component {
 	}
 	deleteStudent(id) {
 		axios
-			.delete(`https://classroom-django.herokuapp.com/api/student/${id}`)
+			.delete(`api/student/${id}`)
 			.then(() => {
 				console.log('Student deleted...');
 				this.fetchData();

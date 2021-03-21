@@ -20,7 +20,7 @@ export class Login extends Component {
 	loginUser(event) {
 		event.preventDefault();
 		axios
-			.post('https://classroom-django.herokuapp.com/api/auth/login/', {
+			.post('api/auth/login/', {
 				username: this.state.credentials['username'],
 				password: this.state.credentials['password']
 			})
